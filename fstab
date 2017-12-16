@@ -1,0 +1,20 @@
+# partition     mount point     file system     options                                                                                                         dump  pass
+# /dev/sda3 - Arch Linux root
+/dev/sda3	/         	btrfs     	rw,relatime,space_cache,subvolid=5,subvol=/	                                                                0     0
+
+# /dev/sda1 - EFI system
+/dev/sda1      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0     2
+
+# /dev/sda2 - swap
+/dev/sda2       swap            swap            sw                                                                                                              0     0
+
+# /dev/sdb1 - data partition
+/dev/sdb1       /data           ext4            defaults                                                                                                        0     1
+
+# /dev/sda4 - Gentoo Linux
+/dev/sda4       /gentoo         btrfs           defaults                                                                                                        0     1
+/dev/sdb1       /gentoo/data    ext4            defaults                                                                                                        0     1
+
+# /dev/sda5 - Void Linux
+/dev/sda5       /void           btrfs           defaults                                                                                                        0     1
+/dev/sdb1       /void/data      ext4            defaults                                                                                                        0     1
